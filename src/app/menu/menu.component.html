@@ -1,12 +1,13 @@
 <div class="menu">
+  <span class="logo">LOGO</span>
   <ul>
-    <li class="top-level" *ngFor = "let menu of menuItems">
-      <i class="arrow {{menu.icon}}"></i>
+    <li class="top-level" *ngFor = "let menu of menuItems" (click)="listClick($event, menu)" >
+      <i class="icon {{menu.icon}}"></i>
       <span class="menu-text">{{ menu.title }}</span>
-
+      <i class="arrow {{menu.arrowDown}}"></i>
       <ul>
-        <li class="child-level" *ngFor = "let child of menu.children">
-          <span class="menu-text">{{child}}</span>
+        <li class="child-level" *ngFor = "let child of menu.children" [hidden]="true">
+          <span class="menu-text">{{ child }}</span>
         </li>
       </ul>
     </li>
