@@ -1,0 +1,14 @@
+<div class="menu">
+  <ul>
+    <li class="top-level" *ngFor = "let menu of menuItems">
+      <i class="arrow {{menu.icon}}"></i>
+      <span class="menu-text">{{ menu.title }}</span>
+
+      <ul>
+        <li class="child-level" *ngFor = "let child of menu.children">
+          <span class="menu-text">{{child}}</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
