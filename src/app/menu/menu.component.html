@@ -5,8 +5,8 @@
       <i class="icon {{menu.icon}}"></i>
       <span class="menu-text">{{ menu.title }}</span>
       <i class="arrow {{menu.arrowDown}}"></i>
-      <ul>
-        <li class="child-level" *ngFor = "let child of menu.children" [hidden]="true">
+      <ul >
+        <li  class="child-level" *ngFor = "let child of menu.children" [hidden]="menu.isOpen">
           <span class="menu-text">{{ child }}</span>
         </li>
       </ul>

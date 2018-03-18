@@ -9,20 +9,17 @@ import { MENU } from '../menu-data';
 export class MenuComponent implements OnInit {
   menuItems = MENU;
 
-  
-
- 
-
-  listClick(event, menu){
+  listClick(event, menu) {
     console.log(event);
-    console.log(menu)
+    console.log(menu);
+    menu.isOpen = !menu.isOpen;
+
   }
 
   constructor() { }
 
   ngOnInit() {
     console.log(this.menuItems);
-    
   }
 
 }
