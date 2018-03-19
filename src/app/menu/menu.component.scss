@@ -1,4 +1,5 @@
-$collapsedColor: #402f50;
+$collapsedColor: #4F2E6A;
+$expandedColor: #402f50;
 
 .menu {
   background-color: $collapsedColor;
@@ -8,9 +9,18 @@ $collapsedColor: #402f50;
   width: 250px;
   position: absolute;
 }
+
+.logo{
+  display: block;
+  width: 200px;
+  margin: auto;
+  padding: 20px;
+  border-bottom: 2px $expandedColor solid;
+}
 li {
   padding: 10px 0;
   cursor: pointer;
+  border-bottom: 2px $expandedColor solid;
 }
 
 i.icon{
@@ -27,6 +37,13 @@ i.arrow{
   position: relative;
   left: 60px;
 }
+
+.top-level {
+  .collapsed{
+    display: none;
+  }
+}
+
 
 
 

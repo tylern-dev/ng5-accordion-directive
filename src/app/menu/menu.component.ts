@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MENU } from '../menu-data';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { MENU } from '../mock-menu-data';
 
 @Component({
   selector: 'app-menu',
@@ -8,11 +8,12 @@ import { MENU } from '../menu-data';
 })
 export class MenuComponent implements OnInit {
   menuItems = MENU;
+  isCollapsed=true;
 
   listClick(event, menu) {
     console.log(event);
     console.log(menu);
-    menu.isOpen = !menu.isOpen;
+    menu.isClosed = !menu.isClosed;
 
   }
 
