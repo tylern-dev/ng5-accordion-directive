@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
+import { MenuDataService } from './menu-data.service';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [MenuDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,11 +1,11 @@
 <div class="menu">
-  <img src="../../assets/images/rizepoint logo.png" class="logo" >
+  <img src="{{logo}}" class="logo">
   <ul>
-    <li class="top-level" *ngFor="let menu of menuItems" [ngStyle]="{'background-color': menu.isClosed ? '' : '#402f50'}">
-      <div (click)="listClick($event, menu)" [ngStyle]="{'color': menu.isClosed ? '' : '#fff'}">
+    <li class="li-container" *ngFor="let menu of menuItems" [ngStyle]="{'background-color': menu.isClosed ? '' : '#402f50'}">
+      <div class="top-level" (click)="listClick($event, menu)" [ngStyle]="{'color': menu.isClosed ? '' : '#fff'}">
         <i class="icon {{menu.icon}}"></i>
-        <span class="menu-text" >{{ menu.title }}</span>
-        <i class="arrow fa" [ngClass] = "{'fa-arrow-down': menu.isClosed, 'fa-arrow-up': !menu.isClosed }"></i>
+        <a class="menu-text">{{ menu.title }}</a>
+        <i class="arrow fa" [ngClass]="{'fa-arrow-down': menu.isClosed, 'fa-arrow-up': !menu.isClosed }"></i>
       </div>
       <ul>
         <li class="child-level" *ngFor="let child of menu.children" [class.collapsed]="menu.isClosed">

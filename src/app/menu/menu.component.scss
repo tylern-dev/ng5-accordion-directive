@@ -1,9 +1,17 @@
 $collapsedColor: #4F2E6A;
 $expandedColor: #402f50;
+$fontColor: #ccc;
+$hoverColor: #fff;
+
+.menu ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
 
 .menu {
   background-color: $collapsedColor;
-  color: #ccc;
+  color: $fontColor;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   width: 250px;
@@ -17,10 +25,23 @@ $expandedColor: #402f50;
   padding: 20px;
   border-bottom: 2px $expandedColor solid;
 }
+
 li {
-  padding: 10px 0;
-  cursor: pointer;
+  padding: 5px 0;
   border-bottom: 2px $expandedColor solid;
+  
+  li:hover{
+    color: $hoverColor;;
+    cursor: pointer;
+  }  
+}
+
+.top-level{
+  padding: 10px 0;
+}
+
+li .top-level{
+  cursor: pointer;
 }
 
 i.icon{
@@ -38,11 +59,13 @@ i.arrow{
   left: 60px;
 }
 
-.top-level {
+.li-container {
   .collapsed{
     display: none;
   }
 }
+
+
 
 
 
