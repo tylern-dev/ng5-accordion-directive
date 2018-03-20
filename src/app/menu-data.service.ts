@@ -9,7 +9,7 @@ import { MENU } from './mock-menu-data';
 export class MenuDataService {
 
   constructor() { }
-
+  // Serving mock menu data
   getMenuData(): Observable<Menu[]> {
     return of(MENU);
   }
