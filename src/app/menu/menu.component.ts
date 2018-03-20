@@ -15,7 +15,6 @@ export class MenuComponent implements OnInit {
   constructor(private menuDataService: MenuDataService ) { }
 
   ngOnInit() {
-    console.log(this.menuItems);
     this.getMenuData();
   }
 
@@ -24,9 +23,5 @@ export class MenuComponent implements OnInit {
     this.menuDataService.getMenuData().subscribe(menuItems => this.menuItems = menuItems);
   }
 
-  listClick(event, menu) {
-    console.log(event);
-    console.log(menu);
-    menu.isClosed = !menu.isClosed;
-  }
+
 }

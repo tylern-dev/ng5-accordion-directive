@@ -10,7 +10,7 @@ $hoverColor: #fff;
 }
 
 .menu {
-  background-color: $collapsedColor;
+  background-color: $expandedColor;
   color: $fontColor;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
@@ -19,8 +19,9 @@ $hoverColor: #fff;
 }
 
 .logo{
+  background-color: $collapsedColor;
   display: block;
-  width: 200px;
+  width: 210px;
   margin: auto;
   padding: 20px;
   border-bottom: 2px $expandedColor solid;
@@ -35,6 +36,10 @@ li {
     cursor: pointer;
   }  
 }
+
+// li.li-container{
+//   background-color: $collapsedColor;
+// }
 
 .top-level{
   padding: 10px 0;
@@ -59,10 +64,12 @@ i.arrow{
   left: 60px;
 }
 
-.li-container {
-  .collapsed{
-    display: none;
-  }
+.collapsed{
+  display: none;
+}
+
+.collapsed-color{
+  background-color: $collapsedColor;
 }
 
 

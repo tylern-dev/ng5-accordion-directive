@@ -1,14 +1,15 @@
-<div class="menu">
+<div class="menu" >
   <img src="{{logo}}" class="logo">
   <ul>
-    <li class="li-container" *ngFor="let menu of menuItems" [ngStyle]="{'background-color': menu.isClosed ? '' : '#402f50'}">
-      <div class="top-level" (click)="listClick($event, menu)" [ngStyle]="{'color': menu.isClosed ? '' : '#fff'}">
+    
+    <li class="li-container collapsed-color" *ngFor="let menu of menuItems" appMenuCollapse>
+      <div class="top-level" >
         <i class="icon {{menu.icon}}"></i>
-        <a class="menu-text">{{ menu.title }}</a>
-        <i class="arrow fa" [ngClass]="{'fa-arrow-down': menu.isClosed, 'fa-arrow-up': !menu.isClosed }"></i>
+        <span class="menu-text">{{ menu.title }}</span>
+        <i class="arrow fa fa-arrow-down" id="arrow"></i>
       </div>
-      <ul>
-        <li class="child-level" *ngFor="let child of menu.children" [class.collapsed]="menu.isClosed">
+      <ul class="child-level collapsed">
+        <li *ngFor="let child of menu.children"  >
           <span class="menu-text">{{ child }}</span>
         </li>
       </ul>
